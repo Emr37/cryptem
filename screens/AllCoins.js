@@ -25,14 +25,10 @@ const AllCoinsScreen = () => {
   return (
     <>
       <View style={globalStyles.container}>
-        <Text>Main Screen</Text>
-        <TouchableOpacity onPress={notify}>
-          <Text>Press Me (Notify)</Text>
-        </TouchableOpacity>
         {isLoading ? (
           <ActivityIndicator />
         ) : (
-          <FlatList data={coins} style={{ width: "100%" }} renderItem={({ item }) => <Currencies data={item} />} keyExtractor={(item) => item.symbol} />
+          <FlatList data={coins} style={{ width: "100%" }} renderItem={({ item }) => <Currencies data={item} />} keyExtractor={(item) => item.id} />
         )}
       </View>
     </>

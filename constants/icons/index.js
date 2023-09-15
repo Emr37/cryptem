@@ -4,4 +4,8 @@ const TabIcon = ({ size, color, name }) => {
   return <Ionicons name={name} size={size} color={color} />;
 };
 
-export { TabIcon };
+const Icon = ({ size, color, name }) => {
+  return <Ionicons name={name} size={size} color={color} />;
+};
+
+export { TabIcon, Icon };

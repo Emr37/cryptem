@@ -3,10 +3,10 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
 const Currencies = ({ data }) => {
-  const navigation = useNavigation();
+  const { navigate } = useNavigation();
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("Detail", { symbol: data.symbol })}>
+    <TouchableOpacity onPress={() => navigate("Detail", { symbol: data.symbol, id: data.id, name: data.name })}>
       <View style={styles.container}>
         <View style={styles.iconContianer}>
           <Image style={styles.icon} source={{ uri: data.image }} />
@@ -15,9 +15,10 @@ const Currencies = ({ data }) => {
           <Text style={styles.symbol}>{data.symbol}</Text>
           <Text style={styles.name}>{data.name}</Text>
         </View>
+
         <View style={styles.exchange}>
-          <Text style={styles.text}>BTC</Text>
-          <Text style={styles.price}>{data.priceBtc.toFixed(10)}</Text>
+          <Text style={styles.text}>USD</Text>
+          <Text style={styles.price}>{data.priceUsd}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -64,8 +65,8 @@ const styles = StyleSheet.create({
   exchange: {
     marginLeft: 16,
     justifyContent: "center",
-    alignItems: "center",
-    width: 100,
+    alignItems: "flex-end",
+    width: "40%",
   },
   text: {
     fontSize: 14,
