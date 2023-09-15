@@ -9,10 +9,13 @@ import "react-native-get-random-values";
 import { v4 as uuidv4 } from "uuid";
 import Exchange from "../components/Exchange";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigation } from "@react-navigation/native";
 
 const { width } = Dimensions.get("window");
 
 const DetailScreen = ({ route }) => {
+  const navigation = useNavigation();
+
   const { symbol, id, name } = route.params;
   const { fetchData, isLoading, priceAndTime } = detailStore();
   const { auth } = authStore();
@@ -41,9 +44,9 @@ const DetailScreen = ({ route }) => {
           <View style={[styles.container, { justifyContent: "flex-start", alignItems: "center" }]}>
             <Text style={styles.title}>{name}</Text>
             <View style={styles.chartContainer}>
-              {priceAndTime.map((item) => {
+              {priceAndTime.map((item, index) => {
                 return (
-                  <View key={uuidv4()} style={styles.chart}>
+                  <View key={index} style={styles.chart}>
                     <Text style={styles.time}>{item.time}</Text>
                     <Text style={styles.price}>{item.price}</Text>
                   </View>
@@ -54,9 +57,11 @@ const DetailScreen = ({ route }) => {
               <Exchange />
             ) : (
               <>
-                <TouchableOpacity>
-                  <Text>Oturum Aç</Text>
-                </TouchableOpacity>
+                <View style={styles.buttonContainer}>
+                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Cüzdan")}>
+                    <Text style={styles.buttonText}>Oturum Aç</Text>
+                  </TouchableOpacity>
+                </View>
               </>
             )}
           </View>
@@ -101,6 +106,30 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 16,
     fontWeight: "600",
+  },
+  buttonContainer: {
+    width: "60%",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 40,
+  },
+  button: {
+    backgroundColor: "#fff",
+    width: "100%",
+    padding: 15,
+    borderRadius: 10,
+    alignItems: "center",
+    borderColor: "#cda540",
+    borderWidth: 2,
+  },
+  buttonOutline: {
+    backgroundColor: "#fff",
+    marginTop: 5,
+  },
+  buttonText: {
+    color: "#cda540",
+    fontWeight: "700",
+    fontSize: 16,
   },
 });
 

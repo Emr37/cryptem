@@ -18,8 +18,9 @@ const Exchange = () => {
 
   const buy = () => {
     const total = lastPrice * Number(amount);
+    let usd = currency[0].usd;
 
-    result = currency[0].usd - total;
+    result = usd - total;
     setUpdatedUsd(result);
 
     toast.show(`${amount} miktar coininiz başarıyla alınmıştır. Kalan bakiyeniz ${updatedUsd} USD`, {

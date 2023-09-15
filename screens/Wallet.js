@@ -46,10 +46,6 @@ const WalletScreen = () => {
   useFocusEffect(
     useCallback(() => {
       getSpots();
-
-      return () => {
-        setCurrency([]);
-      };
     }, [])
   );
 
@@ -99,9 +95,9 @@ const WalletScreen = () => {
 
         <View style={styles.chartContainer}>
           {currency &&
-            currency.map((item) => {
+            currency.map((item, index) => {
               return (
-                <View key={uuidv4()} style={styles.chart}>
+                <View key={index} style={styles.chart}>
                   <Text style={styles.time}>{Object.keys(item)}</Text>
                   <Text style={styles.price}>{Object.values(item)}</Text>
                 </View>
