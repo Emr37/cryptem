@@ -11,17 +11,16 @@ const Exchange = () => {
   const { lastPrice } = detailStore();
   const [user, setUser] = useState({});
   const [currency, setCurrency] = useState([]);
+  const [usd, setUsd] = useState(1000);
   const [updatedUsd, setUpdatedUsd] = useState();
   const [amount, setAmount] = useState("");
 
   const toast = useToast();
 
-  const buy = () => {
-    const total = lastPrice * Number(amount);
-    let usd = currency[0].usd;
+  const buy = async () => {
+    const total = (await lastPrice) * Number(amount);
 
-    result = usd - total;
-    setUpdatedUsd(result);
+    setUpdatedUsd(usd - total);
 
     toast.show(`${amount} miktar coininiz başarıyla alınmıştır. Kalan bakiyeniz ${updatedUsd} USD`, {
       type: "success",
@@ -32,7 +31,7 @@ const Exchange = () => {
 
     setAmount("");
 
-    updateCurrencies(result);
+    updateCurrencies(usd - total);
   };
 
   const sell = (amount) => {
@@ -57,7 +56,7 @@ const Exchange = () => {
       let data = docSnap.data();
       setCurrency(data.spots);
 
-      let index = currency.findIndex((item) => {
+      let index = currency?.findIndex((item) => {
         return Object.keys(item) == "usd";
       });
 
@@ -92,7 +91,7 @@ const Exchange = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Şimdiki Değeri: {lastPrice} </Text>
+      <Text>Last Price: {lastPrice} </Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={() => buy()}>
           <Text style={styles.buttonText}>Alış</Text>
@@ -102,7 +101,7 @@ const Exchange = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.inputContainer}>
-        <TextInput placeholder="Bir Miktar Giriniz" onChangeText={(text) => setAmount(text)} value={amount} style={styles.input} keyboardType={"numeric"} />
+        <TextInput placeholder="Amount" onChangeText={(text) => setAmount(text)} value={amount} style={styles.input} keyboardType={"numeric"} />
       </View>
     </View>
   );

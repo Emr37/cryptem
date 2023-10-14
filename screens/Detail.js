@@ -58,7 +58,7 @@ const DetailScreen = ({ route }) => {
             ) : (
               <>
                 <View style={styles.buttonContainer}>
-                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Cüzdan")}>
+                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Wallet")}>
                     <Text style={styles.buttonText}>Oturum Aç</Text>
                   </TouchableOpacity>
                 </View>

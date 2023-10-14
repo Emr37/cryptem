@@ -46,7 +46,7 @@ const RootNavigation = () => {
             }}
           >
             <Stack.Screen name="Cryptem" component={TabNav} />
-            <Stack.Screen options={{ title: "Detaylar" }} name="Detail" component={DetailScreen} />
+            <Stack.Screen options={{ title: "Details" }} name="Detail" component={DetailScreen} />
             <Stack.Screen name="Register" component={RegisterScreen} />
           </Stack.Navigator>
         </NavigationContainer>

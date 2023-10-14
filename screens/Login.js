@@ -27,7 +27,7 @@ const LoginScreen = () => {
         console.log(user);
         console.log("user Id token", user.getIdToken);
         AsyncStorage.setItem("user", JSON.stringify(user));
-        navigation.navigate("Cüzdan");
+        navigation.navigate("Wallet");
       }
     });
 
@@ -55,7 +55,7 @@ const LoginScreen = () => {
             <View style={styles.inputContainer}>
               <TextInput
                 name="email"
-                placeholder="E-Posta"
+                placeholder="E-Mail"
                 onChangeText={handleChange("email")}
                 onBlur={handleBlur("email")}
                 value={values.email}
@@ -68,7 +68,7 @@ const LoginScreen = () => {
             <View style={styles.inputContainer}>
               <TextInput
                 name="password"
-                placeholder="Şifre"
+                placeholder="Password"
                 onChangeText={handleChange("password")}
                 onBlur={handleBlur("password")}
                 value={values.password}
@@ -81,11 +81,11 @@ const LoginScreen = () => {
 
             <View style={styles.buttonContainer}>
               <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-                <Text style={styles.buttonText}>Oturum Aç</Text>
+                <Text style={styles.buttonText}>Login</Text>
               </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-              <Text style={styles.info}>Cüzdan hesabınız yoksa buradan oluşturabilirsiniz.</Text>
+              <Text style={styles.info}>Haven't an account?</Text>
             </TouchableOpacity>
           </View>
         </TouchableWithoutFeedback>

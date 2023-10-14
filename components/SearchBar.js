@@ -12,7 +12,7 @@ export default function SearchBar() {
       <TouchableOpacity style={styles.iconContainer}>
         <Icon color={"#cda540"} size={24} name={"search"} onPress={() => {}} />
       </TouchableOpacity>
-      <TextInput style={styles.input} placeholderTextColor={"#cda540"} placeholder="Ara" value={query} onChangeText={setQuery} />
+      <TextInput style={styles.input} placeholderTextColor={"#cda540"} placeholder="Search" value={query} onChangeText={setQuery} />
     </View>
   );
 }

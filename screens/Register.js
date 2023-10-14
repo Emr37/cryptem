@@ -18,7 +18,7 @@ const RegisterScreen = () => {
         console.log("user Id token", user.getIdToken);
         AsyncStorage.setItem("user", JSON.stringify(user));
 
-        navigation.navigate("Cüzdan");
+        navigation.navigate("Wallet");
       }
     });
 
@@ -45,7 +45,7 @@ const RegisterScreen = () => {
           <View style={styles.inputContainer}>
             <TextInput
               name="email"
-              placeholder="E-Posta"
+              placeholder="E-Mail"
               onChangeText={handleChange("email")}
               onBlur={handleBlur("email")}
               value={values.email}
@@ -58,7 +58,7 @@ const RegisterScreen = () => {
           <View style={styles.inputContainer}>
             <TextInput
               name="password"
-              placeholder="Şifre"
+              placeholder="Password"
               onChangeText={handleChange("password")}
               onBlur={handleBlur("password")}
               value={values.password}
@@ -71,7 +71,7 @@ const RegisterScreen = () => {
 
           <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-              <Text style={styles.buttonText}>Kayıt Ol</Text>
+              <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
           </View>
         </View>

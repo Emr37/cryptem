@@ -50,7 +50,7 @@ const authStore = create((set) => ({
     await signOut(auth);
     await AsyncStorage.removeItem("user");
     set({ user: {} });
-    //navigation.navigate("Cüzdan");
+    //navigation.navigate("Wallet");
   },
 }));
 

@@ -18,8 +18,6 @@ const WalletScreen = () => {
   const [currency, setCurrency] = useState([]);
 
   console.log(currency);
-  //console.log(Object.keys(currency.spots[0]));
-  //console.log(Object.values(currency.spots[0]));
 
   // Read Data ////////////////////////////////////////
   const getSpots = async () => {
@@ -55,7 +53,7 @@ const WalletScreen = () => {
     const newUserRef = doc(db, "users", user.uid);
 
     await setDoc(newUserRef, {
-      spots: [{ usd: 1000 }],
+      spots: [{ sol: 10 }, { usd: 100 }],
     });
   };
 
@@ -69,6 +67,8 @@ const WalletScreen = () => {
   useEffect(() => {
     getUser();
   }, []);
+
+  console.log(currency);
   ////////////////////////////////////////////////////////
   return (
     <>
@@ -86,18 +86,17 @@ const WalletScreen = () => {
             <Ionicons name={"power"} size={36} color={"#000"} />
           </TouchableOpacity>
         </View>
-        <Text>Hello</Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={() => denemeUsd()}>
-            <Text style={styles.buttonText}>1000 USD Al</Text>
+            <Text style={styles.buttonText}>Get Airdrop Sol</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.chartContainer}>
           {currency &&
-            currency.map((item, index) => {
+            currency?.map((item) => {
               return (
-                <View key={index} style={styles.chart}>
+                <View key={Object.keys(item)} style={styles.chart}>
                   <Text style={styles.time}>{Object.keys(item)}</Text>
                   <Text style={styles.price}>{Object.values(item)}</Text>
                 </View>

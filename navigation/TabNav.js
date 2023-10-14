@@ -46,7 +46,7 @@ export const TabNav = () => {
         initialRouteName="Anasayfa"
       >
         <Tab.Screen
-          name="Piyasalar"
+          name="Market"
           component={AllCoinsScreen}
           options={{
             tabBarIcon: ({ focused }) => <TabIcon color={"#cda540"} size={focused ? 48 : 32} name={focused ? "list" : "list-outline"} />,
@@ -58,13 +58,13 @@ export const TabNav = () => {
           options={{
             tabBarIcon: ({ focused }) => <TabIcon color={"#cda540"} size={focused ? 48 : 32} name={focused ? "home" : "home-outline"} />,
 
-            title: "Popüler",
+            title: "Popular",
           }}
         />
 
         {auth.currentUser ? (
           <Tab.Screen
-            name="Cüzdan"
+            name="Wallet"
             component={WalletScreen}
             options={{
               tabBarIcon: ({ focused }) => <TabIcon color={"#cda540"} size={focused ? 48 : 32} name={focused ? "wallet" : "wallet-outline"} />,
@@ -72,7 +72,7 @@ export const TabNav = () => {
           />
         ) : (
           <Tab.Screen
-            name="Cüzdan"
+            name="Wallet"
             component={LoginScreen}
             options={{
               tabBarIcon: ({ focused }) => <TabIcon color={"#cda540"} size={focused ? 48 : 32} name={focused ? "wallet" : "wallet-outline"} />,
