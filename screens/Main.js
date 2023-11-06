@@ -12,6 +12,7 @@ const MainScreen = () => {
 
   useEffect(() => {
     fetchCoins();
+    alert("Coin bilgileri alındı.");
   }, []);
 
   useEffect(() => {

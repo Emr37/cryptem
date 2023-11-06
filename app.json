@@ -6,16 +6,22 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.emraksoy.cyrptem"
+      "package": "com.emraksoy.cyrptem",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -25,6 +31,9 @@
         "projectId": "6aa4e65c-0d42-462d-a960-bd7592c39419"
       }
     },
-    "owner": "emraksoy"
+    "owner": "emraksoy",
+    "updates": {
+      "url": "https://u.expo.dev/6aa4e65c-0d42-462d-a960-bd7592c39419"
+    }
   }
 }

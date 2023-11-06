@@ -37,7 +37,8 @@
     "uuid": "^9.0.1",
     "yup": "^1.2.0",
     "zustand": "^4.4.1",
-    "expo-splash-screen": "~0.20.5"
+    "expo-splash-screen": "~0.20.5",
+    "expo-updates": "~0.18.17"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
