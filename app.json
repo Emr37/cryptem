@@ -40,7 +40,7 @@
     "runtimeVersion": "1.0.0",
     "config": {
       "googleMaps": {
-        "apiKey": "AIzaSyD-XtRRUV_rQlnTuRNgXbS1gkY0S-yVyXU"
+        "apiKey": ""
       }
     }
   },
