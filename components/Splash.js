@@ -5,7 +5,7 @@ const SplashScreen = () => {
   const imageScale = new Animated.Value(0);
 
   Animated.timing(imageScale, {
-    toValue: 1,
+    toValue: 0.8,
     duration: 3000,
     useNativeDriver: false,
   }).start();

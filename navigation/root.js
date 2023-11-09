@@ -31,26 +31,22 @@ const RootNavigation = () => {
 
   return (
     <>
-      {isLoading ? (
-        <SplashScreen />
-      ) : (
-        <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{
-              headerShown: true,
-              headerShadowVisible: false,
-              headerStyle: { backgroundColor: "#eee" },
-              headerTitleAlign: "center",
-              title: "CRYPTEM",
-              headerTintColor: "#cda540",
-            }}
-          >
-            <Stack.Screen name="Cryptem" component={TabNav} />
-            <Stack.Screen options={{ title: "Details" }} name="Detail" component={DetailScreen} />
-            <Stack.Screen name="Register" component={RegisterScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      )}
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: true,
+            headerShadowVisible: false,
+            headerStyle: { backgroundColor: "#eee" },
+            headerTitleAlign: "center",
+            title: "CRYPTEM",
+            headerTintColor: "#cda540",
+          }}
+        >
+          <Stack.Screen name="Cryptem" component={TabNav} />
+          <Stack.Screen options={{ title: "Details" }} name="Detail" component={DetailScreen} />
+          <Stack.Screen name="Register" component={RegisterScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };
