@@ -29,6 +29,15 @@ const RootNavigation = () => {
     }, 3000);
   }, []);
 
+  if (isLoading) {
+    return (
+      <>
+        <StatusBar hidden />
+        <SplashScreen />
+      </>
+    );
+  }
+
   return (
     <>
       <NavigationContainer>

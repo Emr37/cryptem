@@ -4,7 +4,6 @@
     "slug": "cyrptem",
     "version": "1.1.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "extra": {
       "eas": {
         "projectId": "6aa4e65c-0d42-462d-a960-bd7592c39419"
@@ -14,7 +13,8 @@
       "url": "https://u.expo.dev/6aa4e65c-0d42-462d-a960-bd7592c39419"
     },
     "android": {
-      "runtimeVersion": "1.0.0"
+      "runtimeVersion": "1.0.0",
+      "package": "com.emraksoy.cyrptem"
     },
     "ios": {
       "runtimeVersion": {
@@ -22,11 +22,7 @@
       }
     }
   },
-  "splash": {
-    "image": "./assets/splash.png",
-    "resizeMode": "contain",
-    "backgroundColor": "#000000"
-  },
+
   "userInterfaceStyle": "automatic",
   "assetBundlePatterns": ["**/*"],
   "ios": {
@@ -41,7 +37,12 @@
       "backgroundColor": "#000000"
     },
     "package": "com.emraksoy.cyrptem",
-    "runtimeVersion": "1.0.0"
+    "runtimeVersion": "1.0.0",
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyD-XtRRUV_rQlnTuRNgXbS1gkY0S-yVyXU"
+      }
+    }
   },
   "web": {
     "favicon": "./assets/favicon.png"

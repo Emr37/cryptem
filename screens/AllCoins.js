@@ -6,7 +6,7 @@ import Currencies from "../components/Currencies";
 import homeStore from "../store/homeStore";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import MapView, { Marker, Callout } from "react-native-maps";
+import MapView, { Marker, Callout, PROVIDER_GOOGLE } from "react-native-maps";
 
 const AllCoinsScreen = () => {
   // const toast = useToast();
@@ -23,13 +23,6 @@ const AllCoinsScreen = () => {
   //   fetchCoins();
   // }, []);
 
-  const initialRegion = {
-    latitude: 41.01,
-    longitude: 29.0,
-    latitudeDelta: 0.5,
-    longitudeDelta: 0.5,
-  };
-
   return (
     <>
       <View style={globalStyles.container}>
@@ -39,8 +32,25 @@ const AllCoinsScreen = () => {
           <FlatList data={coins} style={{ width: "100%" }} renderItem={({ item }) => <Currencies data={item} />} keyExtractor={(item) => item.id} />
         )*/}
 
-        <MapView style={styles.map} region={initialRegion}>
-          <Marker coordinate={initialRegion} pinColor="#cda540" />
+        <MapView
+          style={styles.map}
+          region={{
+            latitude: 41.01,
+            longitude: 29.0,
+            latitudeDelta: 0.5,
+            longitudeDelta: 0.5,
+          }}
+          provider={PROVIDER_GOOGLE}
+        >
+          <Marker
+            coordinate={{
+              latitude: 41.01,
+              longitude: 29.0,
+              latitudeDelta: 0.5,
+              longitudeDelta: 0.5,
+            }}
+            pinColor="#cda540"
+          />
         </MapView>
       </View>
     </>
