@@ -12,11 +12,9 @@ const MainScreen = () => {
 
   useEffect(() => {
     fetchCoins();
-    alert("Değişiklik oldu mu?");
-  }, []);
-
-  useEffect(() => {
     fetchBtcUsd();
+
+    alert("Veriler geldi mi?");
   }, []);
 
   return (
