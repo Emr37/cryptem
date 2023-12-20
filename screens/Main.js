@@ -12,7 +12,7 @@ const MainScreen = () => {
 
   useEffect(() => {
     fetchCoins();
-    alert("EAS update alındı mı?");
+    alert("EAS update alındı mı? Alınmadı mı?");
   }, []);
 
   useEffect(() => {
