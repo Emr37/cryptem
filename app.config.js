@@ -2,13 +2,13 @@ module.exports = ({ config }) => {
   return {
     ...config,
     android: {
-      versionCode: 3,
+      versionCode: 1,
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#000000",
       },
       package: "com.emraksoy.cyrptem",
-      runtimeVersion: "1.0.0",
+      runtimeVersion: "1.1.1",
       config: {
         googleMaps: {
           apiKey: process.env.GOOGLE_API_KEY,
