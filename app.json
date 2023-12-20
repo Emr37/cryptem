@@ -2,58 +2,41 @@
   "expo": {
     "name": "Cryptem",
     "slug": "cyrptem",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "android": {
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.emraksoy.cyrptem",
+      "runtimeVersion": "1.0.0",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD-XtRRUV_rQlnTuRNgXbS1gkY0S-yVyXU"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "extra": {
       "eas": {
         "projectId": "6aa4e65c-0d42-462d-a960-bd7592c39419"
       }
     },
+    "owner": "emraksoy",
     "updates": {
       "url": "https://u.expo.dev/6aa4e65c-0d42-462d-a960-bd7592c39419"
-    },
-    "android": {
-      "runtimeVersion": "1.0.0",
-      "package": "com.emraksoy.cyrptem"
-    },
-    "ios": {
-      "runtimeVersion": {
-        "policy": "appVersion"
-      }
     }
-  },
-
-  "userInterfaceStyle": "automatic",
-  "assetBundlePatterns": ["**/*"],
-  "ios": {
-    "supportsTablet": true,
-    "runtimeVersion": {
-      "policy": "appVersion"
-    }
-  },
-  "android": {
-    "adaptiveIcon": {
-      "foregroundImage": "./assets/adaptive-icon.png",
-      "backgroundColor": "#000000"
-    },
-    "package": "com.emraksoy.cyrptem",
-    "runtimeVersion": "1.0.0",
-    "config": {
-      "googleMaps": {
-        "apiKey": ""
-      }
-    }
-  },
-  "web": {
-    "favicon": "./assets/favicon.png"
-  },
-  "extra": {
-    "eas": {
-      "projectId": "6aa4e65c-0d42-462d-a960-bd7592c39419"
-    }
-  },
-  "owner": "emraksoy",
-  "updates": {
-    "url": "https://u.expo.dev/6aa4e65c-0d42-462d-a960-bd7592c39419"
   }
 }
