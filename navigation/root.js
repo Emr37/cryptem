@@ -47,7 +47,7 @@ const RootNavigation = () => {
             headerShadowVisible: false,
             headerStyle: { backgroundColor: "#eee" },
             headerTitleAlign: "center",
-            title: "CRYPTEM",
+            title: "CRYPTEMRAH",
             headerTintColor: "#cda540",
           }}
         >
