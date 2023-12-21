@@ -2,7 +2,7 @@ module.exports = ({ config }) => {
   return {
     ...config,
     android: {
-      versionCode: 4,
+      versionCode: 5,
       runtimeVersion: {
         policy: "appVersion",
       },
