@@ -6,11 +6,11 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "assetBundlePatterns": ["**/*"],
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "ios": {
-      "supportsTablet": true,
-      "runtimeVersion": {
-        "policy": "appVersion"
-      }
+      "supportsTablet": true
     },
 
     "web": {
@@ -23,9 +23,7 @@
     },
     "owner": "emraksoy",
     "updates": {
-      "url": "https://u.expo.dev/6aa4e65c-0d42-462d-a960-bd7592c39419",
-      "enabled": true,
-      "fallbackToCacheTimeout": 10000
+      "url": "https://u.expo.dev/6aa4e65c-0d42-462d-a960-bd7592c39419"
     }
   }
 }
