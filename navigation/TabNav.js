@@ -46,7 +46,7 @@ export const TabNav = () => {
         initialRouteName="Anasayfa"
       >
         <Tab.Screen
-          name="Market"
+          name="Map"
           component={AllCoinsScreen}
           options={{
             tabBarIcon: ({ focused }) => <TabIcon color={"#cda540"} size={focused ? 48 : 32} name={focused ? "list" : "list-outline"} />,
