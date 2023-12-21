@@ -47,8 +47,8 @@ const RootNavigation = () => {
             headerShadowVisible: false,
             headerStyle: { backgroundColor: "#eee" },
             headerTitleAlign: "center",
-            title: "CRYPTEMRAH",
-            headerTintColor: "#cda540",
+            title: "CRYPTEM",
+            headerTintColor: "#cabaff",
           }}
         >
           <Stack.Screen name="Cryptem" component={TabNav} />

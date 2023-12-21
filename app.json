@@ -7,11 +7,26 @@
     "icon": "./assets/icon.png",
     "assetBundlePatterns": ["**/*"],
 
+    "android": {
+      "versionCode": 0,
+      "runtimeVersion": "0",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.emraksoy.cyrptem",
+      "config": {
+        "googleMaps": {
+          "apiKey": ""
+        }
+      }
+    },
+
     "ios": {
+      "supportsTablet": true,
       "runtimeVersion": {
         "policy": "appVersion"
-      },
-      "supportsTablet": true
+      }
     },
 
     "web": {
