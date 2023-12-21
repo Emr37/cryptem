@@ -2,10 +2,8 @@ module.exports = ({ config }) => {
   return {
     ...config,
     android: {
-      versionCode: 5,
-      runtimeVersion: {
-        policy: "appVersion",
-      },
+      versionCode: 6,
+      runtimeVersion: "1.1.1",
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#000000",

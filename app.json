@@ -6,10 +6,11 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "assetBundlePatterns": ["**/*"],
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+
     "ios": {
+      "runtimeVersion": {
+        "policy": "appVersion"
+      },
       "supportsTablet": true
     },
 
